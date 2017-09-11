@@ -8,8 +8,8 @@ github: https://github.com/wangdaowei/
 baseurl: ""
 description: 点滴积累，贵在坚持！
 meta_description: 王道威;个人博客;
-motto: keep running.
-banner: 学而不思则罔，思而不学则殆。
+motto: 点滴积累，贵在坚持！
+banner: 点滴积累，贵在坚持！
 
 #permalink: /:categories/:year/:month/:day/:title/
 permalink: /:year/:month/:day/:title/
