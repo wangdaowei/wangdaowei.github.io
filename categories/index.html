@@ -1,42 +1,47 @@
 ---
 layout: default
-nav: category
-permalink: /cn/categories/
-lang: cn
+title: 分类
+header: Posts By Category
 ---
 
-<ul id="myTab" class="nav nav-tabs">
-{% for category in site.categories %}
-	{% capture cn %}{{ category | first }}{% endcapture %}
-	{% if categoryname != cn %}
-		{% assign categoryname = cn %}
-	    <li{% if forloop.first %} class="active"{% endif %}>
-		  <a href="/{{ page.lang }}/categories/#aa{{ cn }}" data-toggle="tab">{{ category | first }}</a>
-    </li>
-	{% endif %}
-{% endfor %}
-</ul>
-<div id="myTabContent" class="tab-content">
-{% for category in site.categories %}
-	{% capture cn %}{{ category | first }}{% endcapture %}
-	{% if categoryname != cn %}
-		{% assign categoryname = cn %}
-                {% if forloop.first %}{% else %}</div>{% endif %}
-                <div class="tab-pane fade{% if forloop.first %} in active{% endif %}" id="aa{{ cn }}">
-	{% endif %}
-	{% for post in category.last %}
-	{% if post.lang contains page.lang %}
-	  <p>
-	  <time datetime="{{ post.date | date_to_string }}">{{ post.date | date: "%Y-%m-%d" }}</time>
-	  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-	  </p>
-	{% endif %}
-	{% endfor %}
-{% endfor %}
+<div class="container docs-container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="sidebar hidden-print" role="complementary">
+        <div id="navigation">
+        	<h1>目录</h1>
+      		<ul class="nav sidenav">
+				{% if site.categories.first[0] == null %}
+					{% for category in site.categories %} 
+				    	<li><a href="#{{ category }}-ref">
+				    		{{ category | join: "/" }} <span style="color: #999999;" >({{ site.categories[category].size }})</span>
+				    	</a></li>
+			    	{% endfor %}
+			  	{% else %}
+			    	{% for category in site.categories %} 
+				    	<li><a href="#{{ category[0] }}-ref">
+				    		{{ category[0] | join: "/" }} <span style="color: #999999;" >({{ category[1].size }})</span>
+				    	</a></li>
+			    	{% endfor %}
+			  	{% endif %}
+          	</ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-9" role="main">
+      <div class="panel docs-content">
+        <div class="wrapper">
+          <div class="home">
+			{% for category in site.categories %} 
+			  <h2 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h2>
+			  <ul>
+			    {% assign pages_list = category[1] %}  
+			    {% include LessOrMore/pages_list %}
+			  </ul>
+			{% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-<script>
-    $(function () {
-        $('#myTab a[href="/{{ page.lang }}/categories/'+window.location.hash+'"]').tab('show');
-    });
-</script>

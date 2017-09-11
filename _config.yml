@@ -1,59 +1,26 @@
-# Resources settings
-source:      .
-layouts:     ./_layouts
-timezone:    Asia/Hongkong
-
 # Site settings
-email: 1540294142@qq.com
-author: Joytou Wu
-owner_name: Joytou Wu
-github_username: joytou
-repo: joytou.github.io
+name: Less Or More
+email: luoyan35714@126.com
+author: Freud Kang
+url: http://www.hifreud.com
+resume_site: http://www.hifreud.com/Resume.io/
+github: https://github.com/luoyan35714/
+baseurl: "/LessOrMore"
+description: Actually, less is more!
+meta_description: 康志华;个人博客;学而不思则罔;思而不学则殆;生命不止;折腾不休
+motto: It's our wits that make us men.
+banner: 学而不思则罔，思而不学则殆。
 
-#Server
-url: http://joytou.nets.hk
-github: https://github.com/joytou/
-baseurl: ""
-
-#Page settings
-future: true
-show_drafts: nil
-lsi: true
-published: false
-safe: false
+#permalink: /:categories/:year/:month/:day/:title/
 permalink: /:year/:month/:day/:title/
+paginate: 10
+
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
+
+github_username: luoyan35714
+
+# Build settings
 markdown: kramdown
-excerpt_separator: '<!-- more -->'
 
-exclude: ['README.md','Manifest.md']
-include: ['robots.txt']
-
-# Description
-description: "只为博客而生，也因为博客而存在。Not only for the existence of the blog, but also because of the existence of the blog."
-# Keywords
-keywords:
-        - "github"
-        - "bootstrap"
-        - "blog"
-        - "joytou"
-        - "markdown"
-        - "jekyll"
-        - "博客"
-        - "个人博客"
-        - "博客模板"
-        
-#Update configuration
-versioncode: 1
-        #The current versioncode.
-versionname: "1.0.1"
-        #The current versionname.
-remind: true
-        #Whether to remind you to upgrade the latest version when there is the latest version.
-
-#Others
-#Baidu
-BaiduSiteVerification: "lLhmCmVmTf"
-#51La
-51la: "19258191"
-51lamb: "1"
+baidu_analysis: 94be4b0f9fc5d94cc0d0415ea6761ae9
 
