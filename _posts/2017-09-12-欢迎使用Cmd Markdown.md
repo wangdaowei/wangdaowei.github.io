@@ -1,9 +1,9 @@
 ﻿---
 layout: post
-title:  欢迎使用 Cmd Markdown 编辑阅读器
-date:   2017-09-12 00:00:00 +0800
-categories: Markdown
-tag: Markdown使用说明
+title:  永久放弃评论功能
+date:   2017-07-24 00:00:00 +0800
+categories: document
+tag: 教程
 ---
 
 * content
@@ -13,7 +13,6 @@ tag: Markdown使用说明
 欢迎使用 Cmd Markdown 编辑阅读器
 ====================================
 
-------
 
 我们理解您需要更便捷更高效的工具记录思想，整理笔记、知识，并将其中承载的价值传播给他人，**Cmd Markdown** 是我们给出的答案 —— 我们为记录思想和分享知识提供更专业的工具。 您可以使用 Cmd Markdown：
 
