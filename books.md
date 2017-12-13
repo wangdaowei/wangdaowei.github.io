@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 看过的书
+title: 书籍推荐
 permalink: /books/
 ---
 
