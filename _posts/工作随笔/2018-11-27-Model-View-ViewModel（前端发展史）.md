@@ -64,12 +64,14 @@ ViewModel如何编写？需要用JavaScript编写一个通用的ViewModel，这�
 
 我们先看用jQuery实现的修改两个DOM节点的例子：
 
+```javascript
 <!-- HTML -->
 <p>Hello, <span id="name">Bart</span>!</p>
 <p>You are <span id="age">12</span>.</p>
 Hello, Homer!
 
 You are 51.
+```
 
 用jQuery修改name和age节点的内容：
 
@@ -99,11 +101,11 @@ var person = {
 
 要把显示的name从Bart改为Homer，把显示的age从12改为51，我们并不操作DOM，而是直接修改JavaScript对象：
 
+```javascript
 Hello, Homer!
 
 You are 51.
 
-```javascript
 'use strict';
 
 person.name = 'Homer';
